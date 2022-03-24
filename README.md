@@ -26,13 +26,13 @@ The code can be compiled in two ways:
 
 1. A miniconda environment (testing done on an Ubuntu 18 system).
 
-2. The scripts create environments {compile,run}{1,2}.  These should
-   not exists ahead of time.
+2. The scripts create environments `{compile,run}{1,2}`.  These should
+   not exist ahead of time.
 
-3. The scripts expect to install into /tmp/eigentest.
+3. The scripts expect to install into `/tmp/eigentest`.
 
-4. /tmp/in.las should be valid (smallish) las file.  The scripts
-   expect to write output to /tmp/out{1,2}.las.
+4. `/tmp/in.las` should be a valid (smallish) las file.  The scripts
+   expect to write output to `/tmp/out{1,2}.las`.
 
 This behavior can be configured by the variables set at the top of the
 scripts.
@@ -42,11 +42,11 @@ scripts.
 Run
 
 ```
-scripts/compile-good.sh
-scripts/run-good.sh
+scripts/compile-good.sh > compile-good.log 2>&1
+scripts/run-good.sh > run-good.log 2>&1
 ```
 
-The end of the output from the second script is
+The end `run-good.log` is
 
 ```
 z = A\B (standalone eigen) =
@@ -74,11 +74,11 @@ solutions.
 Run
 
 ```
-scripts/compile-bad.sh
-scripts/run-bad.sh
+scripts/compile-bad.sh > compile-bad.log 2>&1
+scripts/run-bad.sh > run-bad.log 2>&1
 ```
 
-The end of the output from the second script is
+The end `run-bad.log` is
 
 ```
 z = A\B (standalone eigen) =
