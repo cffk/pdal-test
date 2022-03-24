@@ -39,7 +39,7 @@ int main () {
 
   // Eigen's solution
   z = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(B);
-  std::cout << "y=\n" << y << "\n"
-            << "z=\n" << z << "\n";
+  std::cout << "y (octave) =\n" << y << "\n"
+            << "z (eigne) =\n" << z << "\n";
 }
 

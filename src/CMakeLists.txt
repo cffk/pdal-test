@@ -16,7 +16,6 @@ install(TARGETS
   ARCHIVE DESTINATION lib${LIB_SUFFIX})
 
 add_executable (bare_eigentest bareeigentest.cpp)
-add_executable (bare_eigentest2 bareeigentest.cpp)
 
 target_link_libraries (bare_eigentest
   PRIVATE ${Eigen3_LIBRARIES})
@@ -24,10 +23,4 @@ target_link_libraries (bare_eigentest
 target_include_directories (bare_eigentest
   PRIVATE ${EIGEN3_INCLUDE_DIRS})
 
-target_link_libraries (bare_eigentest2
-  PRIVATE ${PDAL_LIBRARIES} ${Eigen3_LIBRARIES})
-
-target_include_directories (bare_eigentest2
-  PRIVATE ${PDAL_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
-
-install(TARGETS bare_eigentest bare_eigentest2 DESTINATION bin)
+install(TARGETS bare_eigentest DESTINATION bin)

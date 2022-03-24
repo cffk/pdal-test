@@ -6,12 +6,11 @@ if (NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
   # if no build type is set.
   set (CMAKE_BUILD_TYPE Release)
 endif ()
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package (PDAL 2.0 REQUIRED CONFIG)
 find_package (Eigen3 REQUIRED)
 set (Eigen3_LIBRARIES Eigen3::Eigen)
-find_package (PDAL 2.0 REQUIRED CONFIG)
 
-message (STATUS "Include dirs ${PDAL_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS}")
 add_subdirectory (src)
