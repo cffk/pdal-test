@@ -1,5 +1,5 @@
 {% set repo = "eigentest" %}
-{% set version = "1.0.dev3" %}
+{% set version = "1.0.dev4" %}
 
 package:
   name: "{{ repo|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/cffk/pdal-test.git
-  git_rev: master
+  git_rev: {{ version }}
 
 build:
   number: 0

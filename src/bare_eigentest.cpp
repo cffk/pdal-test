@@ -39,6 +39,6 @@ int main () {
 
   // Eigen's solution
   z = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(B);
-  std::cout << "z = A\B (standalone eigen) =\n" << z << "\n";
+  std::cout << "z = A\\B (standalone eigen) =\n" << z << "\n";
 }
 

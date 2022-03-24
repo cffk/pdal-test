@@ -58,7 +58,7 @@ namespace pdal {
 
       // Eigen's solution
       z = A.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(B);
-      std::cout << "z = A\B (pdal eigen) =\n" << z << "\n";
+      std::cout << "z = A\\B (pdal eigen) =\n" << z << "\n";
     }
     PointViewSet viewSet;
     viewSet.insert(input);
