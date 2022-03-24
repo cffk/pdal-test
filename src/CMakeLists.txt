@@ -15,7 +15,7 @@ install(TARGETS
   LIBRARY DESTINATION lib${LIB_SUFFIX}
   ARCHIVE DESTINATION lib${LIB_SUFFIX})
 
-add_executable (bare_eigentest bareeigentest.cpp)
+add_executable (bare_eigentest bare_eigentest.cpp)
 
 target_link_libraries (bare_eigentest
   PRIVATE ${Eigen3_LIBRARIES})
