@@ -2,6 +2,9 @@
 
 This illustrates a bad interaction with eigen pdal and conda-build.
 
+*UPDATE*: this bug has been fixed by specifying the conda build
+ dependency `eigen=3.3.9` compatible with what was used for pdal.
+
 ## Introduction
 
 The test code in `src` consists of a simple do-nothing pdal filter
